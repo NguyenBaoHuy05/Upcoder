@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "LopmangSv",
+  "steps": [
+    {
+      "file": "lập trình hướng đối tượng/2. friend & quá tải toán tử/LOPMANGSV.cpp",
+      "description": "Xóa cờ lỗi khi xung đột với lệnh While trong Điem",
+      "line": 131
+    }
+  ]
+}
