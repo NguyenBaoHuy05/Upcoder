@@ -18,10 +18,6 @@ istream& operator>>(istream& in,VoiPhun &x){
     in>>x.o>>x.r;
     return in;
 }
-ostream& operator<<(ostream& os,VoiPhun x){
-    os<<"(x"<<((x.o.x<0)?'+':'-')<<abs(x.o.x)<<")^2+(y"<<((x.o.y<0)?'+':'-')<<abs(x.o.y)<<")^2="<<x.r*x.r;
-    return os;
-}
 double dt(VoiPhun a){
     return a.r*a.r*PI;
 }
@@ -32,7 +28,7 @@ double operator -(VoiPhun a,VoiPhun b){
     return sqrt((a.o.x-b.o.x)*(a.o.x-b.o.x)+(a.o.y-b.o.y)*(a.o.y-b.o.y));
 }
 bool operator &(VoiPhun a,VoiPhun b){
-    return ((a-b)-a.r-b.r<0);
+    return (a.r+b.r-(a-b)>0);
 }
 double trung(VoiPhun a,VoiPhun b){
     double d=a-b;
@@ -48,13 +44,34 @@ int main(){
     if(a&b) cout<<"A chong lap B";
     else "A khong chong lap B";
     cout<<endl;
-    int c;double d=0;
+    int c;double d=0,h=0;
     cin>>c;
-    vector<VoiPhun> e;
+    VoiPhun e[c];
+    vector<bool> kt(c+1,1);
     for(int i=0;i<c;i++){
-        cin>>a;
-        e.push_back(a);
-        d+=dt(a);
+        cin>>e[i];
+        d+=dt(e[i]);
     }
+    for(int i=0;i<c-1;i++){
+        if(kt[i]){
+            for(int j=i+1;i<c;i++){
+                if(kt[j]){
+                if(e[i]&e[j]) {
+                    kt[i]=0;
+                    kt[j]=0;
+                    cout<<"("<<i+1<<","<<j+1<<")"<<" ";
+                    h+=trung(e[i],e[j]);
+                    break;
+                    } 
+                }
+            
+            }
+
+        }
+
+    }
+    cout<<endl;
+    int f=round((d-h)*100/d-1.2);
+    
     return 0;
 }
