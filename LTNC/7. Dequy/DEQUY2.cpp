@@ -32,3 +32,33 @@ int main(){
     }
     return 0;
 }
+/*đức làm
+#include<bits/stdc++.h>
+using namespace std;
+int x[19999], n, d[1000];
+void gn() {
+    for (int i=1;i<=n;i++) cout << x[i];
+    cout << "\n";
+}
+void ql(int i) {
+    for (int j=1;j<=n;j++) {
+        if (d[j]==0)
+        {
+            d[j]=1;
+            x[i]=j;
+            if (i==n) gn();
+            else ql(i+1);
+            d[j]=0;
+        }
+    }
+}
+int gt(int n) {
+    if (n==1) return n;
+    return n*gt(n-1);
+}
+signed main()
+{
+    cin >> n;
+    cout << gt(n) << "\n";
+    ql(1);
+}*/
