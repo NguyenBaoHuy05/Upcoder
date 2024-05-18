@@ -4,8 +4,8 @@
 
 using namespace std;
 
-const int MAX_M = 1000;
-const int MAX_N = 1000;
+const int MAX_M = 15;
+const int MAX_N = 15;
 
 int M, N;
 int grid[MAX_M][MAX_N];
@@ -40,7 +40,7 @@ void printPath() {
             --j;
         else if (j == 0)
             --i;
-        else if (dp[i - 1][j] >= dp[i][j - 1])
+        else if (dp[i - 1][j] > dp[i][j - 1])
             --i;
         else
             --j;

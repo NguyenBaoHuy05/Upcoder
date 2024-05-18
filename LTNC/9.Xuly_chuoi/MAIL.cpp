@@ -1,13 +1,9 @@
-#include<iostream>
-#include<sstream>
+#include<bits/stdc++.h>
 using namespace std;
 int main(){
-    string a,b;
-    stringstream ss;
-    while(cin>>a) {
-        ss<<a<<" ";
-        ss>>b;
-        if(b.find("@gmail.com")!=string::npos) cout<<b<<endl;
+    string s,s1="@gmail.com";
+    while(cin>>s){
+        if(s.find(s1)!=string::npos) cout<<s<<endl;
     }
     return 0;
 }
