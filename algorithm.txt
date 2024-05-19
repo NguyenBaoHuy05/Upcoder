@@ -1,0 +1,14 @@
+advance(it,v.begin()+2) -> trả về iterrator, chuyển iterator it đến vị trí v.begin()+2
+
+lower_bound(v.begin(),v.end(),tmp) -> trả về iterrator, sao cho tại vị trí it (trong phạm vi đã sắp xếp)
+có giá trị bằng tmp, hoặc lớn hơn nếu ko có tmp
+
+upper_bound(v.begin(),v.end(),tmp) -> trả về iterrator, giống lower_bound nhưng ko trả về tmp (trong phạm vi đã sắp xếp)
+
+binary_search(v.begin(),v.end(),tmp) -> trả về kiểu bool, kiểm tra xen, giá trị tmp có trong phạm vi đã sắp xếp không
+
+equal_range(v.begin(),v.end(),tmp) -> trả về kiểu pair<iterator,iterator>, tìm kiếm phạm vi của các phần tử có giá trị bằng 
+
+includes(vec1.begin(), vec1.end(), vec2.begin(), vec2.end())-> trả về kiểu bool, Kiểm tra xem tất cả các phần tử trong phạm vi thứ nhất có tồn tại trong phạm vi thứ hai không
+
+merge(vec1.begin(), vec1.end(), vec2.begin(), vec2.end(), result.begin())-> trả về kiểu iterator, Hợp nhất hai dãy đã sắp xếp thành một dãy mới đã sắp xếp.

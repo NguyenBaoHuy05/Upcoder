@@ -1,0 +1,5 @@
+=> Có 3 dạng đệ quy: tuyến tính, nhị phân, phi tuyến
+    => Đệ quy tuyến tính: Gọi chính nó 1 lần trong lời gọi đệ quy (giai thừa)
+    => Đệ quy nhị phân: Gọi tới chính nó 2 lần trong 1 lời gọi đệ quy (fibonaci)
+    => Đệ quy phi tuyến: Gọi tới chính nó nhiều lần (lời gọi hàm trong vòng lặp)
+=> Đệ quy phi tuyến ->Ứng dụng vào đệ quy quay lui (Thuật toán vét cạn)

@@ -1,0 +1,13 @@
+=> Đệ quy quay lui => mô hình hóa:
+
+        P(<điều kiện dừng>){
+            <xử lí nếu có>
+
+            if (<điều kiện dừng>) {
+                <xử lí trường hợp dừng>
+            } else{
+                <xử lí trước đệ quy>
+                P(<danh sách tham số mới>)
+                <xử lí sau đệ quy>
+            }
+        }

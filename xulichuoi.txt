@@ -1,0 +1,10 @@
+isdigit(x) => Kiểm tra xem kí tự có phải là chữ số hay không
+isalpha(x) => Kiểm tra xem kí tự có phải là chữ cái hay không
+isalnum(x) => Kiểm tra xem kí tự x có phải là chữ hoặc số hay không
+isspace(x) => Kiểm tra xem kí tự x có phải là khoảng trắng hay không
+islower(x) => Kiểm tra xem kí tự x có phải là chữ cái thường hay không
+isupper(x) => Trả về kí tự in hoa
+tolower(x) => Trả về kí tự in thường
+stoi() =>string to int
+stoll(x) => string to long long
+stod(x) =>string to double
